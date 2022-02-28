@@ -4,11 +4,13 @@ import org.apache.log4j.Logger;
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.events.Attribute;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -43,18 +45,22 @@ public class CompressedOsmParser {
             log.info("Going through XML...");
             XMLEventReader eventReader = processor.getReader();
             Map<String, Integer> redactions = new HashMap<>();
+            Map<String, Integer> tagKeys = new HashMap<>();
             while (eventReader.hasNext()) {
                 XMLEvent nextEvent = eventReader.nextEvent();
                 if (nextEvent.isStartElement()) {
                     StartElement startElement = nextEvent.asStartElement();
                     if (startElement.getName().getLocalPart().equals("node")) {
-                        String user = startElement.getAttributeByName(new QName("user")).getValue();
-                        redactions.merge(user, 1, Integer::sum);
+                        processElementForRedactionsMap(redactions, startElement);
+                        processElementForTagKeysMap(tagKeys, startElement);
                     }
                 }
             }
-            log.info("Processing is finished. Printing sorted result...");
+            log.info("Processing is finished...");
+            log.info("Printing result for redactions...");
             printMap(sortByValues(redactions));
+            log.info("Printing result for 'node' tag keys...");
+            printMap(sortByValues(tagKeys));
         }
     }
 
@@ -65,6 +71,19 @@ public class CompressedOsmParser {
         } else {
             return is;
         }
+    }
+
+    private void processElementForTagKeysMap(Map<String, Integer> tagKeys, StartElement element) {
+        Iterator<Attribute> attributes = element.getAttributes();
+        while (attributes.hasNext()) {
+            String key = attributes.next().getName().toString();
+            tagKeys.merge(key, 1, Integer::sum);
+        }
+    }
+
+    private void processElementForRedactionsMap(Map<String, Integer> redactions, StartElement element) {
+        String user = element.getAttributeByName(new QName("user")).getValue();
+        redactions.merge(user, 1, Integer::sum);
     }
 
     private Map<String, Integer> sortByValues(Map<String, Integer> map) {
