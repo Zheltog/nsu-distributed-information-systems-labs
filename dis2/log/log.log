@@ -1,0 +1,836 @@
+2022-03-03 13:24:30 INFO  CompressedOsmParser:24 - Starting...
+2022-03-03 13:24:30 INFO  CompressedOsmParser:25 - Creating reader for file...
+2022-03-03 13:24:30 INFO  CompressedOsmParser:32 - File RU-NVS.osm.bz2 found in resources folder...
+2022-03-03 13:24:30 INFO  CompressedOsmParser:34 - Buffered reader for file created successfully...
+2022-03-03 13:24:30 INFO  CompressedOsmParser:42 - Processing file...
+2022-03-03 13:24:30 INFO  CompressedOsmParser:44 - StAX processor for file created successfully...
+2022-03-03 13:24:30 INFO  CompressedOsmParser:45 - Going through XML...
+2022-03-03 13:25:22 INFO  CompressedOsmParser:59 - Processing is finished...
+2022-03-03 13:25:22 INFO  CompressedOsmParser:60 - Printing result for redactions...
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - xscvxc - 2005981
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Miroff - 560406
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - siberiano - 436871
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - msergeyv100 - 286077
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - vitstud54 - 117949
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Kaylee - 99500
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - AndreySmirnov - 98787
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - whalerich - 98086
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Pavel Melnikov - 96683
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Sherper - 94298
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - demon_h - 83549
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Guamo - 64595
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - A54 - 59172
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Antonio_92 - 52103
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - koSS_Rus - 44290
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - oo-O-oo - 42530
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ONT - 41282
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Magomogo - 40057
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - yohanson - 32302
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - alex_hitman - 27042
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - mike_lyulyukin - 26618
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - maximaximax - 26484
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Географ - 25685
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - velonavt - 24863
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - MAS - 21969
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - rockcreek - 20626
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Павел Яринюк - 20197
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - VlIvYur - 19264
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - katpatuka - 18049
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Nikolaev - 17004
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ilya3l - 16177
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - pruosm - 14968
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ImmortAlex - 13317
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ratty - 12513
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - serhod - 12437
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - afonin - 12368
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ThaJk - 11920
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - vanomel - 11103
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Karaban2008 - 10728
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - andrewK - 10011
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - malic - 10003
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Басмач - 9446
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - vanchester - 6419
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - SunWind1076 - 6053
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - PARKER1979 - 5820
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Vodila_55 - 5513
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Takuto - 5323
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - usama - 5286
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ordorub - 5230
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Shtirlits - 4642
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Fenuks - 4537
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ошкуй - 4528
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Z440 - 4523
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - F1ex - 4499
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Anatoli - 4441
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - markonspbkem - 4292
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - max041 - 4292
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Sergey_Dzhagov - 4202
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Kuprienko_Viktor - 4185
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Aleksandr Dezhin - 4029
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - zebooka - 3915
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - GreedyGhost - 3775
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - titanlis - 3678
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - alex_k1 - 3662
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - orb04 - 3648
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - kimol - 3583
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ghelius - 3450
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - CrazyViny - 2986
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Upliner - 2936
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Gde-ja - 2891
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Artamonovserg - 2841
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Sergey N - 2692
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Sasha_belok - 2577
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Stroger - 2496
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - dimryb - 2487
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - zynsk - 2260
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - te_mark - 2248
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Brait - 2076
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - MichaelCollinson - 2064
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - OldIvantey - 1817
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - lmaximov - 1738
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Dharma-ae - 1731
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Виталий Махно - 1639
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - v-ozersk - 1637
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - MrYadro - 1602
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Vlad2011_2011 - 1519
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - pankdm - 1512
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - bs1980 - 1508
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Jake Strine - 1461
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - iWowik - 1430
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Inego - 1310
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - IVM - 1308
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Spol81 - 1298
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Xmypblu - 1279
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - test67 - 1279
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Mob!us - 1254
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - МаксимГавронин - 1226
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ffk - 1188
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Komяpa - 1175
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Эцелоп - 1124
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Kostik - 1112
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Slau - 1092
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Cronium - 1018
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - AMDmi3 - 1009
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - old_Bibigon - 983
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Kosyak - 945
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - OldStar - 938
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - axtom - 934
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Igor Reshta - 932
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - dndred - 918
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - SolTomsk1 - 916
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - progserega - 916
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - RSergei - 903
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Whitenight - 893
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Stane - 865
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - donprogramist - 853
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Александр Обливальный - 806
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Dommel5 - 765
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - apLight - 747
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - jmaks - 747
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - maa - 745
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Angara - 742
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - denis_burij - 721
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Dyom - 717
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - dkiselev - 709
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - demon1981 - 707
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - layt - 704
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Андрей Дунаев - 691
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Golovco Anatolie - 688
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - literan - 667
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - LeonidDemidow - 662
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Baris17 - 661
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Yurez_nsk - 658
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Silver87 - 651
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - AleXanDeR_G - 648
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Nucleardragon - 643
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - toyotagps - 615
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - mesousa - 597
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Aleksey Ovchinnikov - 594
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - telefonist - 593
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - rogallic - 586
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - telec121 - 566
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - DmitrySA - 564
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - 54navi - 554
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - guggis - 553
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Zhivin - 551
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - alex_iz_novosiba - 544
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - veslav - 521
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - iPhonin - 514
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - devo4ka-napilnik - 503
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - UMA - 494
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Angry Lizard - 491
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - dfcz55-73 - 490
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ogion76 - 465
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - sersilin - 456
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - olegta - 451
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ivan-ivanych - 451
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - shrk - 450
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Alexey - 447
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - yandobrov - 443
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - DDD5 - 433
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Pavel_Ku - 394
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - dfcz55 - 383
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - bayl - 380
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - alexmak - 374
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Mars_Bogdanow - 371
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Byrbl - 369
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - orionll - 360
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - vezneves1 - 350
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - kir - 349
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - parukhin - 349
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - pavel_vv - 344
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - LLlypuk82 - 335
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - lifeslider - 334
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - chilin - 333
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Fuse100A - 332
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - sefas - 329
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Karemater - 326
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Victor Kachesov - 320
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - w23 - 313
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Maarten Deen - 311
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Stalker61 - 303
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Alexander Leschinsky - 303
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - rrv - 299
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - LexIgnatov - 295
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Scaurr0ck - 292
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Maxim_NSK - 289
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - andrean_ - 288
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ramir - 287
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Yuri Zimin - 284
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Xray2 - 279
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - keepright! er - 276
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Greensk - 275
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Букин - 275
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - aleksey777 - 273
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Айган - 269
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - mkolomeitsev - 268
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - doga - 266
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - KartaBY - 256
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Dmitry Y - 244
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Федосов Сергей - 233
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - chnav - 231
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Andrej293 - 225
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Egor Kalinovsky - 213
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Andrey Astrakhanzev - 212
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Lazarevsk - 203
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - _VAsek_ - 202
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Dimcus - 202
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - polemiker10 - 199
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - brlumen - 194
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Алекс812 - 186
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - s1eepwa1ker - 184
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Runich - 181
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - dostalker - 175
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Serguei Dukachev - 173
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - tony-k - 170
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - AduchiMergen - 166
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - alienchita - 164
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - glebius - 161
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Fox_sibirsky - 161
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - mit3612 - 155
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Larchen - 153
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Dmanys - 152
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - dannykath - 151
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - FvGordon - 149
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - tav - 149
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Premer - 148
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Kudr - 147
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ed_MSL - 146
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - altsky - 146
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - OSMF Redaction Account - 144
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - wicked - 144
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - vomuanyd - 144
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Strober - 142
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - TarzanASG - 142
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Demon_NSK - 140
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Practix - 138
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - aptala - 136
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - RymenarNsk - 135
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ipp1963 - 134
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Санчес - 130
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - webart50 - 128
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Azork - 128
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - samely - 128
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - kosmosoff - 127
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Brom - 126
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - antonpa - 126
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - werner2101 - 126
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - DerLeere - 121
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - gao - 121
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Constantin1913 - 120
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Nicolai - 117
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - soumrachnij - 114
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Helmchen42 - 112
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Alexander Svidcehnkov - 111
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - box_911 - 111
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ivn64 - 109
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - wawont - 108
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - xakpc - 106
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ruffian - 105
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Citibiker - 104
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Sergey001 - 104
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Беломир - 101
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Voldemar0 - 97
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Akela710 - 96
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - vGross - 95
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Max Vasilev - 95
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Evrozvuk - 94
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - dedok - 92
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - KartaFan - 92
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Андрей Омельчук - 92
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - AlRight - 87
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - koala42 - 87
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Olta - 87
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Skrat  nsk - 83
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - jaimemd - 83
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Art9 - 83
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - RichRico - 82
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - johny - 81
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - greencaps - 81
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - bigalxyz123 - 81
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - agamemn - 79
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - kamondir - 79
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - sfedor - 79
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ssv - 79
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Евген1991 - 78
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Felis Pimeja - 77
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - LamerXaKer - 77
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - abel801 - 77
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Volchara - 76
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - AliasVector - 75
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Зайцева Алена - 73
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Silent7 - 72
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - vfjj - 72
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Kirasir - 71
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - hsn208 - 71
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ansider - 70
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - m3a1 - 70
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - maxphizik - 69
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - lurlrlrl - 68
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - wd75 - 68
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Jane4ka - 65
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - temark - 65
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Di Anre - 65
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Margarita24 - 64
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Rage Sergey - 61
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - kotofos - 60
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - alexderev - 60
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Paul Shmarev - 59
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - fubor76 - 59
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - sibwest - 59
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Макс - 59
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - i-l-j-a - 58
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - arcth - 57
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - esaulenka - 57
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Wild1 - 57
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - VyacheslavS - 56
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Den26 - 55
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - loktionov - 54
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - AntonSlusar - 53
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - icepilot - 53
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - S T - 52
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Evgenii__K - 51
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - alexMAP - 51
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - maria159 - 50
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Vbif - 50
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - max630 - 50
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - turula - 49
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Влад_chip - 49
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - AnVas - 48
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Rimdus - 47
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - VTanya - 46
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - unknown365 - 46
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - purumub - 45
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - alcm-b - 45
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - mariya-romasheva - 45
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - anton_sh - 43
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ensay - 42
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - emptySA - 42
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - TourenHannes - 42
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - arteam - 41
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Михаил Борисов - 40
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Nikomuro - 40
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - zSilas - 40
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Aldorens - 40
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - AndrewTheStalker - 40
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - savage81 - 39
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Bedouin - 38
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Alkozin - 38
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - svtol - 38
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - T_G_K - 38
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Vaska72 - 37
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - LaY_zzz - 37
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Damien_Thorn - 37
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - salmin - 37
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - pol78 - 37
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - medvezhut - 36
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ismagilov Roman - 36
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - gsv - 36
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - h4Cx78 - 36
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - oldmen - 36
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Rockstar - 36
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Nikolaich - 36
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - eugennik - 36
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - vespex - 35
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - _govorilka - 35
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Den3309 - 35
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Karta01ru - 35
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Андрей_SwEm - 35
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - xSmit - 34
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Alexandra Pogudina - 34
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - DuhaNsk - 34
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - qwerty51 - 33
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Donatello - 33
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Dimkansk - 32
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Azor Ku - 32
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - _DR_ - 32
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Vadim Zudkin - 32
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ArnoldAleksandr - 31
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - MBear - 31
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - dmOx - 30
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Мехаил - 30
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Romanso - 29
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Маргарита - 29
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - torovec - 29
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Lehansk90 - 29
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - amtor47 - 29
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - svdeys - 29
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Виктория - 29
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ckopnuo-67 - 28
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Denm4a1 - 28
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - fserges - 28
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - adima - 27
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - freeExec - 27
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - iDamir - 27
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - EugeneVD - 27
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - snr - 27
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Yarroslav - 27
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - rumigu - 26
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Badani - 26
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Дядя Алекс - 26
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - LittlePONNY - 26
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - den0508 - 25
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Pavel1377 - 25
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - CAHbKA-IV - 25
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - esperu - 25
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Аннэтик - 25
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - woodpeck_repair - 25
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - raf_gps - 25
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - staytuned - 25
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Koljan87 - 25
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Dmitry Olyenyov - 24
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Juli-li - 24
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - axelr - 23
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - rip - 23
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - easmik - 23
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Freem - 23
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - gabenok - 23
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - solomax - 23
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - SergeyNSK - 22
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Dimokpower - 22
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - stellz - 22
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - supremevil - 22
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - kremlao - 22
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - yalfhg - 22
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - rbuch703 - 22
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - RomanZar - 22
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - камикадзе - 22
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - kupino-cck - 21
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - fernando_67 - 21
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ~Grek~ - 21
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - zqax - 20
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Bulldouzer - 20
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Micogen - 20
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - KsushKA - 20
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - redopium - 20
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - pyadov - 19
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Alexiofx - 19
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ольга26 - 19
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Exella - 19
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Wol1981 - 18
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Nesmero - 18
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - hazardm - 18
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Mir76 - 18
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Алина Рюмшина - 18
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Kanieva_Maria - 17
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - PA94 - 17
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Zhulik - 17
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Kostya8792 - 16
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Fortress - 16
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - MockuT - 15
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Andreevdp - 15
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - andrewry - 15
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - elazarev - 15
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - SuperJet59rus - 15
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - XaE - 15
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Karahagen - 15
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - mad_sanity - 15
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Романенко София - 14
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ordin - 14
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - AxiS - 14
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - baks72 - 14
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - novodim - 14
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - KonoSV - 14
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Andrei Polushin - 14
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Лариса Насырова - 14
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - M I†I S - 14
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Елена123456789 - 14
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Just55 - 13
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - patashnik - 13
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - bober953 - 13
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Estetic Service - 13
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - osm-kazakhstan - 13
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Peter Suvorov - 13
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - IqRus - 12
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - maynich - 12
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Axill - 12
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Eugene Bogoyavlensky - 12
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - FaveOfTheSun - 12
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ullus - 12
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Uzhur - 12
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - develmax - 12
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - nafania - 12
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - demonlord32 - 11
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - birkoff - 11
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - serj02 - 11
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - gadina - 11
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Opeckun - 11
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - calfarome - 11
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Александр Александрович - 11
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - w(HiT)e - 11
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - freietonne-db - 11
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - xybot - 11
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Alexey Sirotkin - 11
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - x86128 - 11
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Шурка - 11
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - �?лья Усенко - 10
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Sirozha - 10
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Андрей2013 - 10
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Striker2000 - 10
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - MaxS - 10
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Sekt® - 10
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Al6ka - 10
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Chekotryas - 10
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - GoodOk - 10
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - aos1986 - 10
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Eugene Muzychenko - 10
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - guest - 9
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - leonet - 9
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - SVA - 9
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Gluk02 - 9
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - pilat - 9
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - MakcuM_1984 - 9
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Михаил Новиков - 9
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - gamma-aspirin - 9
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - serge_vl - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - PlasmaGAN - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Detonator - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Володя71 - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Vvs2 - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - КсенияЭБА - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - VadimZ - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Storm-Sli - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - 2008vit - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Mogamashina - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Анастасия Сергеевна - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Lyubchenko Denis - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Фурманов - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Vadim Ippolitov - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - drewy - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Anton Dessiatov - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Paspartu - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Shonchalay - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - GT21 - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - lks1 - 8
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - iaros - 7
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Manu1400 - 7
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Boobies - 7
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Митёк - 7
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ZCC - 7
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - asinko03 - 7
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Katya817 - 7
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - EvgeniaB - 7
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - armahema - 7
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - natanga - 7
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - lionS - 7
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - jatisw - 7
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - сибиряк54 - 7
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Zverik - 7
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Jim_Di - 7
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - void_nsk - 6
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - CutterRus - 6
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - nick_volynkin - 6
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - sanek01 - 6
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - bull31 - 6
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - sadko1978m - 6
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - xVir - 6
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - melodictsk - 6
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - justhack - 6
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ник С - 6
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - anyerdna - 6
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - salsergey - 6
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - MadBorman - 6
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - D is Developer - 6
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - hadhuey - 6
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Alisha - 6
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - peshkov - 6
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Долана - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Zkir - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Анжела - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Sargis-T111 - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - gwinder - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Pas - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - MZaitsev - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Andrej-2 - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Dmitriy Sysoev - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Inok - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - MaximNikiforov - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Barmagon - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Miheich - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - metrosib - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Anrock - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - omagic - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - nki251 - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Vlasoft - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - mtrr - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - k0rd - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Sibirier - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - art_chernyshev - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - maryfedor - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - LMNNsk - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - nebm51 - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Traveler's Coffee - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - kemmok - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - n06rin - 5
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - TEDERIs - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - аркан - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - frol9 - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - BoomEngine - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Artem_A - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - vitalipet - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ToGr - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - apca - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ediyes - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - elena20112602 - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - landfahrer - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Евгений Юркин - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - De14ri10ng - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - taeno - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Skomoroshka - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - b108 - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - atsman - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Евгенова Людмила - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Doggers - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - dedNikifor - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - BiIbo - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - andygol - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - withoutface - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Tatyana54 - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - sashazykov - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ермак - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Sen-Я - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - malcolmh - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Luis36995 - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - masha33 - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - share-ware - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Vladimir Gin - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - BORZOTA - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - KlaydF - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - pbav - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - снежа - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ignat_b - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - IainMaclean - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ksk91 - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - VeloNightGroup - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - mrmurrdoc - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - salik154 - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Отличница - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Niker - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Petja - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - pogoreli - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - sibklubok - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - srez - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - дизилист - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Kutuzov_optim - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - DIMM54ka - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - StasPekur - 4
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Yuliya28 - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - TSA21432 - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - fomichenko - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - niro - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ohmy - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - imbizo - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - kuzmatsukanov - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ksenia - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - art2010 - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Vladislav Naumov - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - alex_img - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - MaryVeryTheOne - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Dr Kludge - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Sergey Astakhov - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Tim Morley - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ramzes - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Вероника93 - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ezovskikh - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Andre68 - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Aristo - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Taxivs - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Sergey Dorokhin - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - IGNAT_VELIKIY - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - nikolamedik - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Kazikin - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Катерина* - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - fris - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - GanKo - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Vyvern - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - yasaniok - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Андрей Головин - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - markoverride - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Alexander108 - 3
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - EditAmateur - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Маша1993 - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Hunternsk - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - vovchic - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Алех - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Gorovato - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Sergej Bestuzhev - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Andrey-N - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - maggot27 - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - 1234glaz - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - igor1969 - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ashlee - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - О+л+я - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Golova - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - stewie_fisher - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - AlexTheTux - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - вахтовик - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Vazhnov Alexey - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - uno3_2012 - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - alniro1961 - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - kalmar - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - al56 - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - VIPstars - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Saveli - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Myst - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - kudryavsky - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - trolleway - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Evgenyc - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - king_nsk - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - zed-nsk - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - zverevsergei - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - k555211 - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ken826 - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - lexa36588 - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - KekcuHa - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Saniga85 - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - bossleo - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - yaleks - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - dr_hertz - 2
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - iHedonist - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ЗZZZ - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Hassium - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - xof - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Rub21 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - алекса-алексей - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Tropina Olesya - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - katoshi - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ruthmaben - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - inferst - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - shura0 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - TAPAKAH - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - SMP - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Collide205 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Yura Svetlanov - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - serikst - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ajk - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - snixxzz - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - eugene3306 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - int_ua - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Row - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - HHCacher - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - kaminari - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - NTKe - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - efred - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - spark-23 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Naty90 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - tvm - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Сергей N - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - zzazab - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - JuliaFit - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - �?ван Краус - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - zsm991 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - plastun - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - 046 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - cgu66 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ivazin - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - iRadysyuk - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Jonny80 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Jickx - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - leg47 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Zilovetc - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - autoprokat54 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Walter Schlögl - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ovit2 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Dracon64 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - navigARTor - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ranger90 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - hkm - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - yaric - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - reta - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Azor - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - asfintesco - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Pavel Konovalov - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - stenl - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Pudich - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - leshey - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - letchik - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Claudius Henrichs - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Alexey Spiridonov - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - one_half_3544 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Spol1981 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Дведь - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Toxa-xa - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - veronika1412 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Murat Dzhusupov - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - AndiG88 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ciclista - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - deksden - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - tretjakoffffa - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - GriFF - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Classen - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Fabi2 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Stanislav Novosibirsk - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - k1pro - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - greywind - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - ксения козлова - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - uboot - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - andrewa78 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Syl - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - overwolf - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - wheelmap_visitor - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Djonik - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - lzhl - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - aquamarishechka - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Jochen Topf - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Amaroussi - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ropino - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - olehz - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - mavl - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - DemanO - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - tixuwuoz - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - konev - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - mikser33 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - romzes722 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Kristinajdm - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Ezhick - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - K2Zed - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - Dron_007 - 1
+2022-03-03 13:25:22 INFO  CompressedOsmParser:62 - Printing result for 'node' tag keys...
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - uid - 4995317
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - lon - 4995317
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - id - 4995317
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - user - 4995317
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - version - 4995317
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - lat - 4995317
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - changeset - 4995317
+2022-03-03 13:25:22 INFO  CompressedOsmParser:98 - timestamp - 4995317
