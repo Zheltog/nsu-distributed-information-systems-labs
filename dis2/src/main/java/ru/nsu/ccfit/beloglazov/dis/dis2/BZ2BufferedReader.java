@@ -1,4 +1,4 @@
-package ru.nsu.ccfit.beloglazov.dis.dis1;
+package ru.nsu.ccfit.beloglazov.dis.dis2;
 
 import org.apache.commons.compress.compressors.CompressorException;
 import org.apache.commons.compress.compressors.CompressorStreamFactory;

@@ -1,16 +1,13 @@
-package ru.nsu.ccfit.beloglazov.dis.dis1;
+package ru.nsu.ccfit.beloglazov.dis.dis2;
 
 import org.apache.log4j.Logger;
-import javax.xml.namespace.QName;
-import javax.xml.stream.XMLEventReader;
+import ru.nsu.ccfit.beloglazov.dis.dis2.generated.Node;
+import ru.nsu.ccfit.beloglazov.dis.dis2.generated.Tag;
+import javax.xml.bind.JAXBException;
 import javax.xml.stream.XMLStreamException;
-import javax.xml.stream.events.Attribute;
-import javax.xml.stream.events.StartElement;
-import javax.xml.stream.events.XMLEvent;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -38,29 +35,30 @@ public class CompressedOsmParser {
         }
     }
 
-    private void process(BZ2BufferedReader br) throws XMLStreamException {
+    private void process(BZ2BufferedReader br) throws XMLStreamException, JAXBException {
         log.info("Processing file...");
-        try (StAXStreamProcessor processor = new StAXStreamProcessor(br)) {
+        try (OSMReader reader = new OSMReader(br)) {
             log.info("StAX processor for file created successfully...");
             log.info("Going through XML...");
-            XMLEventReader eventReader = processor.getReader();
             Map<String, Integer> redactions = new HashMap<>();
-            Map<String, Integer> tagKeys = new HashMap<>();
-            while (eventReader.hasNext()) {
-                XMLEvent nextEvent = eventReader.nextEvent();
-                if (nextEvent.isStartElement()) {
-                    StartElement startElement = nextEvent.asStartElement();
-                    if (startElement.getName().getLocalPart().equals("node")) {
-                        processElementForRedactionsMap(redactions, startElement);
-                        processElementForTagKeysMap(tagKeys, startElement);
-                    }
+            Map<String, Integer> names = new HashMap<>();
+
+            while (true) {
+                Node node = reader.nextNode();
+                if (node == null) {
+                    break;
+                }
+                processElementForRedactionsMap(redactions, node);
+                for (Tag tag : node.getTag()) {
+                    processElementForNamesMap(names, tag);
                 }
             }
+
             log.info("Processing is finished...");
             log.info("Printing result for redactions...");
             printMap(sortByValues(redactions));
-            log.info("Printing result for 'node' tag keys...");
-            printMap(sortByValues(tagKeys));
+            log.info("Printing result for names...");
+            printMap(sortByValues(names));
         }
     }
 
@@ -73,17 +71,14 @@ public class CompressedOsmParser {
         }
     }
 
-    private void processElementForTagKeysMap(Map<String, Integer> tagKeys, StartElement element) {
-        Iterator<Attribute> attributes = element.getAttributes();
-        while (attributes.hasNext()) {
-            String key = attributes.next().getName().toString();
-            tagKeys.merge(key, 1, Integer::sum);
+    private void processElementForNamesMap(Map<String, Integer> names, Tag tag) {
+        if (tag.getK().equals("name")) {
+            names.merge(tag.getV(), 1, Integer::sum);
         }
     }
 
-    private void processElementForRedactionsMap(Map<String, Integer> redactions, StartElement element) {
-        String user = element.getAttributeByName(new QName("user")).getValue();
-        redactions.merge(user, 1, Integer::sum);
+    private void processElementForRedactionsMap(Map<String, Integer> redactions, Node node) {
+        redactions.merge(node.getUser(), 1, Integer::sum);
     }
 
     private Map<String, Integer> sortByValues(Map<String, Integer> map) {
