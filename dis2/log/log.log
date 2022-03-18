@@ -5327,3 +5327,5 @@
 2022-03-17 18:23:41 INFO  CompressedOsmParser:93 - Ракитники - 1
 2022-03-17 18:23:41 INFO  CompressedOsmParser:93 - Суенга - 1
 2022-03-17 18:23:41 INFO  CompressedOsmParser:93 - Мусы - 1
+2022-03-18 11:01:57 INFO  Main:19 - Successfully connected to local database
+2022-03-18 11:02:32 ERROR Main:15 - FATAL: password authentication failed for user "postgres"
