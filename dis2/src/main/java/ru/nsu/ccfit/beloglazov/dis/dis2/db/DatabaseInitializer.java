@@ -1,0 +1,71 @@
+package ru.nsu.ccfit.beloglazov.dis.dis2.db;
+
+import org.apache.log4j.Logger;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class DatabaseInitializer {
+
+    private static final Logger log = Logger.getLogger(DatabaseInitializer.class);
+
+    private final Connection connection;
+
+    public DatabaseInitializer(Connection connection) {
+        this.connection = connection;
+    }
+
+    public void initializeMissingTables() throws SQLException {
+        log.info("Successfully connected to local database");
+        List<String> tables = this.getTables();
+        log.info("Tables in database: " + tables);
+        if (!tables.contains("nodes")) {
+            this.createNodesTable();
+            log.info("Created table 'nodes'");
+        }
+        if (!tables.contains("tags")) {
+            this.createTagsTable();
+            log.info("Created table 'tags'");
+        }
+    }
+
+    private List<String> getTables() throws SQLException {
+        List<String> result = new ArrayList<>();
+        ResultSet tables = connection
+                .getMetaData()
+                .getTables(null, null, null, new String[]{"TABLE"});
+        while (tables.next()) {
+            result.add(tables.getString("TABLE_NAME"));
+        }
+        return result;
+    }
+
+    private void createNodesTable() throws SQLException {
+        String sql = "create table nodes (" +
+                "id serial not null primary key, " +
+                "lat numeric(10), " +
+                "lon numeric(10), " +
+                "usr varchar(255), " +
+                "uid bigint, " +
+                "visible boolean, " +
+                "version bigint, " +
+                "changeset bigint, " +
+                "timestamp timestamp)";
+
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.execute();
+    }
+
+    private void createTagsTable() throws SQLException {
+        String sql = "create table tags (" +
+                "node_id serial not null references nodes (id), " +
+                "k varchar(255), " +
+                "v varchar(255))";
+
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.execute();
+    }
+}

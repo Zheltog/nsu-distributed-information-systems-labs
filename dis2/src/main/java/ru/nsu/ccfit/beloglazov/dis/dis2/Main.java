@@ -1,7 +1,9 @@
 package ru.nsu.ccfit.beloglazov.dis.dis2;
 
 import org.apache.log4j.Logger;
-import java.util.List;
+import ru.nsu.ccfit.beloglazov.dis.dis2.db.DatabaseConnection;
+import ru.nsu.ccfit.beloglazov.dis.dis2.db.DatabaseInitializer;
+import java.sql.Connection;
 
 public class Main {
 
@@ -11,18 +13,9 @@ public class Main {
 //        new CompressedOsmParser().parse("RU-NVS.osm.bz2");
 
         try {
-            DatabaseInitializer dt = new DatabaseInitializer();
-            log.info("Successfully connected to local database");
-            List<String> tables = dt.getTables();
-            log.info("Tables in database: " + dt.getTables());
-            if (!tables.contains("nodes")) {
-                dt.createNodesTable();
-                log.info("Created table 'nodes'");
-            }
-            if (!tables.contains("tags")) {
-                dt.createTagsTable();
-                log.info("Created table 'tags'");
-            }
+            Connection connection = DatabaseConnection.getConnection();
+            DatabaseInitializer dt = new DatabaseInitializer(connection);
+            dt.initializeMissingTables();
         } catch (Exception e) {
             log.error(e.getMessage());
         }

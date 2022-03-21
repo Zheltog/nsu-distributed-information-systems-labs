@@ -1,0 +1,6 @@
+2022-03-21 15:24:52 INFO  Main:19 - Successfully connected to local database
+2022-03-21 15:24:52 INFO  Main:21 - Tables in database: [nodes, tags, test]
+2022-03-21 15:27:50 INFO  DatabaseInitializer:22 - Successfully connected to local database
+2022-03-21 15:27:50 INFO  DatabaseInitializer:24 - Tables in database: [nodes, tags, test]
+2022-03-21 15:34:05 INFO  DatabaseInitializer:22 - Successfully connected to local database
+2022-03-21 15:34:05 INFO  DatabaseInitializer:24 - Tables in database: [nodes, tags, test]
