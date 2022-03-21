@@ -7,9 +7,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.stream.XMLStreamException;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
 import static java.util.stream.Collectors.toMap;
 
@@ -17,7 +15,7 @@ public class CompressedOsmParser {
 
     private static final Logger log = Logger.getLogger(CompressedOsmParser.class);
 
-    public void parse(String fileName) {
+    public Map<String, List> parse(String fileName) {
         log.info("Starting...");
         log.info("Creating reader for file...");
         InputStream is = null;
@@ -29,17 +27,21 @@ public class CompressedOsmParser {
         log.info("File " + fileName + " found in resources folder...");
         try (BZ2BufferedReader br = new BZ2BufferedReader(is)) {
             log.info("Buffered reader for file created successfully...");
-            process(br);
+            return process(br);
         } catch (Exception e) {
             log.error(e.getMessage());
+            return null;
         }
     }
 
-    private void process(BZ2BufferedReader br) throws XMLStreamException, JAXBException {
+    private Map<String, List> process(BZ2BufferedReader br) throws XMLStreamException, JAXBException {
         log.info("Processing file...");
         try (OSMReader reader = new OSMReader(br)) {
             log.info("StAX processor for file created successfully...");
             log.info("Going through XML...");
+
+            List<Node> nodes = new LinkedList<>();
+            List<Tag> tags = new LinkedList<>();
             Map<String, Integer> redactions = new HashMap<>();
             Map<String, Integer> names = new HashMap<>();
 
@@ -48,8 +50,10 @@ public class CompressedOsmParser {
                 if (node == null) {
                     break;
                 }
+                nodes.add(node);
                 processElementForRedactionsMap(redactions, node);
                 for (Tag tag : node.getTag()) {
+                    tags.add(tag);
                     processElementForNamesMap(names, tag);
                 }
             }
@@ -59,6 +63,11 @@ public class CompressedOsmParser {
             printMap(sortByValues(redactions));
             log.info("Printing result for names...");
             printMap(sortByValues(names));
+
+            Map<String, List> result = new HashMap<>();
+            result.put("nodes", nodes);
+            result.put("tags", tags);
+            return result;
         }
     }
 
