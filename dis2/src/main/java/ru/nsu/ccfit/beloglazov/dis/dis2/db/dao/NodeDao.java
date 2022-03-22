@@ -4,6 +4,7 @@ import ru.nsu.ccfit.beloglazov.dis.dis2.db.ExecuteStrategy;
 import ru.nsu.ccfit.beloglazov.dis.dis2.generated.Node;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 
 public class NodeDao extends Dao {
 
@@ -21,12 +22,13 @@ public class NodeDao extends Dao {
                 ") values (" +
                 node.getId() + ", " +
                 node.getLat() + ", " +
-                node.getLon() + ", " +
-                node.getUser() + ", " +
+                node.getLon() + ", '" +
+                node.getUser() + "', " +
                 node.getUid() + ", " +
                 node.isVisible() + ", " +
                 node.getVersion() + ", " +
                 node.getChangeset() + ", " +
-                node.getTimestamp() + ")";
+                "timestamp '" +
+                Timestamp.from(node.getTimestamp().toGregorianCalendar().toInstant()) + "')";
     }
 }

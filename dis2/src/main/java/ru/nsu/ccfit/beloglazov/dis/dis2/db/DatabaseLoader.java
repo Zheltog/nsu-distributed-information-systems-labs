@@ -7,7 +7,6 @@ import ru.nsu.ccfit.beloglazov.dis.dis2.generated.Node;
 import ru.nsu.ccfit.beloglazov.dis.dis2.generated.Tag;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.List;
 
 public class DatabaseLoader {
 
@@ -31,15 +30,12 @@ public class DatabaseLoader {
         }
     }
 
-    public void insertData(ExecuteStrategy es, List<Node> nodes) {
+    public void insertNode(ExecuteStrategy es, Node node) {
         try {
-            for (Node node : nodes) {
-                nodeDao.insert(es, node);
-                for (Tag tag : node.getTag()) {
-                    tagDao.insert(es, node, tag);
-                }
+            nodeDao.insert(es, node);
+            for (Tag tag : node.getTag()) {
+                tagDao.insert(es, node, tag);
             }
-            log.info("Inserted data via " + es + " strategy");
         } catch (SQLException e) {
             log.error(e.getMessage());
         }

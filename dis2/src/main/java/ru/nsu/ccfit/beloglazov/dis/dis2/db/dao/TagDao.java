@@ -20,8 +20,8 @@ public class TagDao extends Dao {
         return "insert into tags (" +
                 "node_id, k, v" +
                 ") values (" +
-                node.getId() + ", " +
-                tag.getK() + ", " +
-                tag.getV() + ")";
+                node.getId() + ", '" +
+                tag.getK() + "', '" +
+                tag.getV() + "')";
     }
 }

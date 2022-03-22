@@ -1,6 +1,8 @@
 package ru.nsu.ccfit.beloglazov.dis.dis2;
 
 import org.apache.log4j.Logger;
+import ru.nsu.ccfit.beloglazov.dis.dis2.db.DatabaseLoader;
+import ru.nsu.ccfit.beloglazov.dis.dis2.db.ExecuteStrategy;
 import ru.nsu.ccfit.beloglazov.dis.dis2.generated.Node;
 import ru.nsu.ccfit.beloglazov.dis.dis2.generated.Tag;
 import javax.xml.bind.JAXBException;
@@ -10,37 +12,43 @@ import java.io.InputStream;
 import java.util.*;
 import java.util.Map.Entry;
 import static java.util.stream.Collectors.toMap;
+import static ru.nsu.ccfit.beloglazov.dis.dis2.db.DatabaseConnection.getConnection;
+import static ru.nsu.ccfit.beloglazov.dis.dis2.db.DatabaseInitializer.initializeMissingTables;
 
 public class CompressedOsmParser {
 
     private static final Logger log = Logger.getLogger(CompressedOsmParser.class);
 
-    public static List<Node> parse(String fileName, boolean printStatistics) {
+    private static ExecuteStrategy strategy;
+    private static DatabaseLoader loader;
+
+    public static void parseWithLoading(
+            ExecuteStrategy es,
+            String fileName,
+            boolean printStatistics
+    ) {
+        long startTime = System.currentTimeMillis();
+        initializeMissingTables(getConnection());
         log.info("Starting...");
+        strategy = es;
+        loader = new DatabaseLoader(getConnection());
+        loader.clearData();
         log.info("Creating reader for file...");
-        InputStream is = null;
-        try {
-             is = getInputStreamForResource(fileName);
-        } catch (FileNotFoundException e) {
-            log.error(e.getMessage());
-        }
-        log.info("File " + fileName + " found in resources folder...");
-        try (BZ2BufferedReader br = new BZ2BufferedReader(is)) {
+        try (BZ2BufferedReader br = new BZ2BufferedReader(getInputStreamForResource(fileName))) {
             log.info("Buffered reader for file created successfully...");
-            return process(br, printStatistics);
+            process(br, printStatistics);
+            log.info("Time (ms): " + (System.currentTimeMillis() - startTime));
         } catch (Exception e) {
             log.error(e.getMessage());
-            return null;
         }
     }
 
-    private static List<Node> process(BZ2BufferedReader br, boolean printStatistics) throws XMLStreamException, JAXBException {
+    private static void process(BZ2BufferedReader br, boolean printStatistics) throws XMLStreamException, JAXBException {
         log.info("Processing file...");
         try (OSMReader reader = new OSMReader(br)) {
             log.info("StAX processor for file created successfully...");
             log.info("Going through XML...");
 
-            List<Node> nodes = new LinkedList<>();
             Map<String, Integer> redactions = new HashMap<>();
             Map<String, Integer> names = new HashMap<>();
 
@@ -49,7 +57,8 @@ public class CompressedOsmParser {
                 if (node == null) {
                     break;
                 }
-                nodes.add(node);
+                loader.insertNode(strategy, node);
+                if (true) break;
 
                 if (printStatistics) {
                     processElementForRedactionsMap(redactions, node);
@@ -67,8 +76,6 @@ public class CompressedOsmParser {
                 log.info("Printing result for names...");
                 printMap(sortByValues(names));
             }
-
-            return nodes;
         }
     }
 
