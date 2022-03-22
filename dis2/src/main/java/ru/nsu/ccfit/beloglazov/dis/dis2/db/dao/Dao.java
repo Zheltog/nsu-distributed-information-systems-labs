@@ -1,27 +1,43 @@
 package ru.nsu.ccfit.beloglazov.dis.dis2.db.dao;
 
+import ru.nsu.ccfit.beloglazov.dis.dis2.db.ExecuteStrategy;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
 
-public abstract class Dao<T> {
+public class Dao {
 
     private final Connection connection;
+    private final String tableName;
 
-    public Dao(Connection connection) {
+    public Dao(Connection connection, String tableName) {
         this.connection = connection;
+        this.tableName = tableName;
     }
 
-    public void saveViaStatement(T obj) throws SQLException {
-        Statement s = connection.createStatement();
-        s.executeQuery(sqlInsertFor(obj));
+    protected void insert(ExecuteStrategy es, String sql) throws SQLException {
+        switch (es) {
+            case STATEMENT:
+                executeViaStatement(sql);
+                break;
+            case PREPARED_STATEMENT:
+                executeViaPreparedStatement(sql);
+                break;
+        }
     }
 
-    public void saveViaPreparedStatement(T obj) throws SQLException {
-        PreparedStatement ps = connection.prepareStatement(sqlInsertFor(obj));
-        ps.executeQuery();
+    public void truncate() throws SQLException {
+        executeViaPreparedStatement(sqlTruncate());
     }
 
-    public abstract String sqlInsertFor(T obj);
+    private String sqlTruncate() {
+        return "truncate table " + tableName + " cascade";
+    }
+
+    private void executeViaStatement(String sql) throws SQLException {
+        this.connection.createStatement().execute(sql);
+    }
+
+    private void executeViaPreparedStatement(String sql) throws SQLException {
+        this.connection.prepareStatement(sql).execute();
+    }
 }

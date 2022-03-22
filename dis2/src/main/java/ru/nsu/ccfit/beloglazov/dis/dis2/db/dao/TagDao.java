@@ -1,20 +1,22 @@
 package ru.nsu.ccfit.beloglazov.dis.dis2.db.dao;
 
+import ru.nsu.ccfit.beloglazov.dis.dis2.db.ExecuteStrategy;
 import ru.nsu.ccfit.beloglazov.dis.dis2.generated.Node;
 import ru.nsu.ccfit.beloglazov.dis.dis2.generated.Tag;
 import java.sql.Connection;
+import java.sql.SQLException;
 
-public class TagDao extends Dao<Tag> {
+public class TagDao extends Dao {
 
-    private final Node node;
-
-    public TagDao(Node node, Connection connection) {
-        super(connection);
-        this.node = node;
+    public TagDao(Connection connection) {
+        super(connection, "tags");
     }
 
-    @Override
-    public String sqlInsertFor(Tag tag) {
+    public void insert(ExecuteStrategy es, Node node, Tag tag) throws SQLException {
+        insert(es, sqlInsertFor(node, tag));
+    }
+
+    private String sqlInsertFor(Node node, Tag tag) {
         return "insert into tags (" +
                 "node_id, k, v" +
                 ") values (" +

@@ -1,25 +1,22 @@
 package ru.nsu.ccfit.beloglazov.dis.dis2;
 
-import org.apache.log4j.Logger;
 import ru.nsu.ccfit.beloglazov.dis.dis2.db.DatabaseConnection;
 import ru.nsu.ccfit.beloglazov.dis.dis2.db.DatabaseInitializer;
-import ru.nsu.ccfit.beloglazov.dis.dis2.db.DatabaseInserter;
+import ru.nsu.ccfit.beloglazov.dis.dis2.db.DatabaseLoader;
+import ru.nsu.ccfit.beloglazov.dis.dis2.db.ExecuteStrategy;
+import ru.nsu.ccfit.beloglazov.dis.dis2.generated.Node;
 import java.util.List;
-import java.util.Map;
 
 public class Main {
 
-    private static final Logger log = Logger.getLogger(Main.class);
-
     public static void main(String[] args) {
-        try {
-            Map<String, List> result = new CompressedOsmParser().parse("RU-NVS.osm.bz2");
-            new DatabaseInitializer(DatabaseConnection.getConnection()).initializeMissingTables();
-            DatabaseInserter inserter = new DatabaseInserter(DatabaseConnection.getConnection());
-            inserter.insertNodes(result.get("nodes"));
-            inserter.insertTags(result.get("tags"));
-        } catch (Exception e) {
-            log.error(e.getMessage());
-        }
+        List<Node> nodes = CompressedOsmParser.parse(
+                "RU-NVS.osm.bz2",
+                false);
+
+//        DatabaseInitializer.initializeMissingTables(DatabaseConnection.getConnection());
+//        DatabaseLoader loader = new DatabaseLoader(DatabaseConnection.getConnection());
+//        loader.clearData();
+//        loader.insertData(ExecuteStrategy.PREPARED_STATEMENT, nodes);
     }
 }

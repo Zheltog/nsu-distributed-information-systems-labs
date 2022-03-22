@@ -12,27 +12,26 @@ public class DatabaseInitializer {
 
     private static final Logger log = Logger.getLogger(DatabaseInitializer.class);
 
-    private final Connection connection;
-
-    public DatabaseInitializer(Connection connection) {
-        this.connection = connection;
+    public static void initializeMissingTables(Connection connection) {
+        try {
+            log.info("Successfully connected to local database");
+            List<String> tables = DatabaseInitializer.getTables(connection);
+            log.info("Tables in database: " + tables);
+            if (!tables.contains("nodes")) {
+                DatabaseInitializer.createNodesTable(connection);
+                log.info("Created table 'nodes'");
+            }
+            if (!tables.contains("tags")) {
+                DatabaseInitializer.createTagsTable(connection);
+                log.info("Created table 'tags'");
+            }
+            log.info("Missing tables initialization finished successfully");
+        } catch (SQLException e) {
+            log.error(e.getMessage());
+        }
     }
 
-    public void initializeMissingTables() throws SQLException {
-        log.info("Successfully connected to local database");
-        List<String> tables = this.getTables();
-        log.info("Tables in database: " + tables);
-        if (!tables.contains("nodes")) {
-            this.createNodesTable();
-            log.info("Created table 'nodes'");
-        }
-        if (!tables.contains("tags")) {
-            this.createTagsTable();
-            log.info("Created table 'tags'");
-        }
-    }
-
-    private List<String> getTables() throws SQLException {
+    private static List<String> getTables(Connection connection) throws SQLException {
         List<String> result = new ArrayList<>();
         ResultSet tables = connection
                 .getMetaData()
@@ -43,7 +42,7 @@ public class DatabaseInitializer {
         return result;
     }
 
-    private void createNodesTable() throws SQLException {
+    private static void createNodesTable(Connection connection) throws SQLException {
         String sql = "create table nodes (" +
                 "id serial not null primary key, " +
                 "lat numeric(10), " +
@@ -59,7 +58,7 @@ public class DatabaseInitializer {
         ps.execute();
     }
 
-    private void createTagsTable() throws SQLException {
+    private static void createTagsTable(Connection connection) throws SQLException {
         String sql = "create table tags (" +
                 "node_id serial not null references nodes (id), " +
                 "k varchar(255), " +
