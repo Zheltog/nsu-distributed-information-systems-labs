@@ -14,18 +14,18 @@ public class DatabaseInitializer {
 
     public static void initializeMissingTables(Connection connection) {
         try {
-            log.info("Successfully connected to local database");
+//            log.info("Successfully connected to local database");
             List<String> tables = DatabaseInitializer.getTables(connection);
-            log.info("Tables in database: " + tables);
+//            log.info("Tables in database: " + tables);
             if (!tables.contains("nodes")) {
                 DatabaseInitializer.createNodesTable(connection);
-                log.info("Created table 'nodes'");
+//                log.info("Created table 'nodes'");
             }
             if (!tables.contains("tags")) {
                 DatabaseInitializer.createTagsTable(connection);
-                log.info("Created table 'tags'");
+//                log.info("Created table 'tags'");
             }
-            log.info("Missing tables initialization finished successfully");
+//            log.info("Missing tables initialization finished successfully");
         } catch (SQLException e) {
             log.error(e.getMessage());
         }

@@ -6,28 +6,75 @@ import ru.nsu.ccfit.beloglazov.dis.dis2.db.dao.TagDao;
 import ru.nsu.ccfit.beloglazov.dis.dis2.generated.Node;
 import ru.nsu.ccfit.beloglazov.dis.dis2.generated.Tag;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class DatabaseLoader {
 
     private static final Logger log = Logger.getLogger(DatabaseLoader.class);
 
-    private final NodeDao nodeDao;
-    private final TagDao tagDao;
+    private final Connection connection;
+    private Statement batch = null;
 
     public DatabaseLoader(Connection connection) {
-        nodeDao = new NodeDao(connection);
-        tagDao = new TagDao(connection);
+        this.connection = connection;
     }
 
-    public void insertNode(ExecuteStrategy es, Node node) {
+    public long insertViaStatement(Node node) {
         try {
-            nodeDao.insert(es, node);
+            long startTime = System.nanoTime();
+            NodeDao nodeDao = new NodeDao(connection, node);
+            connection.createStatement().execute(nodeDao.getInsertStatementSql());
             for (Tag tag : node.getTag()) {
-                tagDao.insert(es, node, tag);
+                TagDao tagDao = new TagDao(connection, node, tag);
+                connection.createStatement().execute(tagDao.getInsertStatementSql());
+            }
+            return System.nanoTime() - startTime;
+        } catch (SQLException e) {
+            log.error(e.getMessage());
+            return -1;
+        }
+    }
+
+    public long insertViaPreparedStatement(Node node) {
+        try {
+            long startTime = System.nanoTime();
+            NodeDao nodeDao = new NodeDao(connection, node);
+            nodeDao.getPreparedStatement().execute();
+            for (Tag tag : node.getTag()) {
+                TagDao tagDao = new TagDao(connection, node, tag);
+                tagDao.getPreparedStatement().execute();
+            }
+            return System.nanoTime() - startTime;
+        } catch (SQLException e) {
+            log.error(e.getMessage());
+            return -1;
+        }
+    }
+
+    public void addToBatch(Node node) {
+        try {
+            if (batch == null) batch = connection.createStatement();
+            NodeDao nodeDao = new NodeDao(connection, node);
+            batch.addBatch(nodeDao.getInsertStatementSql());
+            for (Tag tag : node.getTag()) {
+                TagDao tagDao = new TagDao(connection, node, tag);
+                batch.addBatch(tagDao.getInsertStatementSql());
             }
         } catch (SQLException e) {
             log.error(e.getMessage());
+        }
+    }
+
+    public long executeBatch() {
+        try {
+            long startTime = System.nanoTime();
+            batch.executeBatch();
+            return System.nanoTime() - startTime;
+        } catch (SQLException e) {
+            log.error(e.getMessage());
+            return -1;
         }
     }
 }

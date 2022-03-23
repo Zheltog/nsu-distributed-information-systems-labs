@@ -15,6 +15,7 @@ import static java.util.stream.Collectors.toMap;
 import static ru.nsu.ccfit.beloglazov.dis.dis2.db.DatabaseCleaner.cleanTables;
 import static ru.nsu.ccfit.beloglazov.dis.dis2.db.DatabaseConnection.getConnection;
 import static ru.nsu.ccfit.beloglazov.dis.dis2.db.DatabaseInitializer.initializeMissingTables;
+import static ru.nsu.ccfit.beloglazov.dis.dis2.db.ExecuteStrategy.BATCH;
 
 public class CompressedOsmParser {
 
@@ -22,44 +23,67 @@ public class CompressedOsmParser {
 
     private static ExecuteStrategy strategy;
     private static DatabaseLoader loader;
+    private static int for1st;
 
+    /**
+        @param es execute strategy for data loading
+        @param fileName name of compressed osm file
+        @param printStatistics should print redactions and names statistics after finishing (true/false)
+        @param forFirst process for first ? nodes (-1 for all)
+     **/
     public static void parseWithLoading(
             ExecuteStrategy es,
             String fileName,
-            boolean printStatistics
+            boolean printStatistics,
+            int forFirst
     ) {
-        long startTime = System.currentTimeMillis();
+//        log.info("Starting...");
         initializeMissingTables(getConnection());
         cleanTables(getConnection());
-        log.info("Starting...");
         strategy = es;
+        for1st = forFirst;
         loader = new DatabaseLoader(getConnection());
-        log.info("Creating reader for file...");
+//        log.info("Creating reader for file...");
         try (BZ2BufferedReader br = new BZ2BufferedReader(getInputStreamForResource(fileName))) {
-            log.info("Buffered reader for file created successfully...");
-            process(br, printStatistics);
-            log.info("Time (ms): " + (System.currentTimeMillis() - startTime));
+//            log.info("Buffered reader for file created successfully...");
+            long bestInsertTimeNSecs = process(br, printStatistics);
+            double bestInsertTimeSecs = (double) bestInsertTimeNSecs / 1000000000;
+            log.info("Best 1 node insert time (sec) for strategy " + strategy + ": " + bestInsertTimeSecs);
         } catch (Exception e) {
             log.error(e.getMessage());
         }
     }
 
-    private static void process(BZ2BufferedReader br, boolean printStatistics) throws XMLStreamException, JAXBException {
-        log.info("Processing file...");
+    private static long process(BZ2BufferedReader br, boolean printStatistics) throws XMLStreamException, JAXBException {
+//        log.info("Processing file...");
         try (OSMReader reader = new OSMReader(br)) {
-            log.info("StAX processor for file created successfully...");
-            log.info("Going through XML...");
+//            log.info("StAX processor for file created successfully...");
+//            log.info("Going through XML...");
 
             Map<String, Integer> redactions = new HashMap<>();
             Map<String, Integer> names = new HashMap<>();
+
+            int nodesCount = 1;
+            long bestInsertTime = Long.MAX_VALUE;
 
             while (true) {
                 Node node = reader.nextNode();
                 if (node == null) {
                     break;
                 }
-                loader.insertNode(strategy, node);
-                if (true) break;
+
+                switch (strategy) {
+                    case STATEMENT:
+                        long timeS = loader.insertViaStatement(node);
+                        if (timeS < bestInsertTime) bestInsertTime = timeS;
+                        break;
+                    case PREPARED_STATEMENT:
+                        long timePS = loader.insertViaPreparedStatement(node);
+                        if (timePS < bestInsertTime) bestInsertTime = timePS;
+                        break;
+                    case BATCH:
+                        loader.addToBatch(node);
+                }
 
                 if (printStatistics) {
                     processElementForRedactionsMap(redactions, node);
@@ -67,9 +91,18 @@ public class CompressedOsmParser {
                         processElementForNamesMap(names, tag);
                     }
                 }
+
+                if (++nodesCount == for1st) {
+                    break;
+                }
             }
 
-            log.info("Processing is finished...");
+            if (strategy.equals(BATCH)) {
+                long timeB = loader.executeBatch() / nodesCount;
+                if (timeB < bestInsertTime) bestInsertTime = timeB;
+            }
+
+//            log.info("Processing is finished...");
 
             if (printStatistics) {
                 log.info("Printing result for redactions...");
@@ -77,6 +110,8 @@ public class CompressedOsmParser {
                 log.info("Printing result for names...");
                 printMap(sortByValues(names));
             }
+
+            return bestInsertTime;
         }
     }
 
