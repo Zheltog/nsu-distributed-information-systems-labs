@@ -9,7 +9,7 @@ import java.sql.Timestamp;
 public class NodeDao extends Dao {
 
     public NodeDao(Connection connection) {
-        super(connection, "nodes");
+        super(connection);
     }
 
     public void insert(ExecuteStrategy es, Node node) throws SQLException {

@@ -12,6 +12,7 @@ import java.io.InputStream;
 import java.util.*;
 import java.util.Map.Entry;
 import static java.util.stream.Collectors.toMap;
+import static ru.nsu.ccfit.beloglazov.dis.dis2.db.DatabaseCleaner.cleanTables;
 import static ru.nsu.ccfit.beloglazov.dis.dis2.db.DatabaseConnection.getConnection;
 import static ru.nsu.ccfit.beloglazov.dis.dis2.db.DatabaseInitializer.initializeMissingTables;
 
@@ -29,10 +30,10 @@ public class CompressedOsmParser {
     ) {
         long startTime = System.currentTimeMillis();
         initializeMissingTables(getConnection());
+        cleanTables(getConnection());
         log.info("Starting...");
         strategy = es;
         loader = new DatabaseLoader(getConnection());
-        loader.clearData();
         log.info("Creating reader for file...");
         try (BZ2BufferedReader br = new BZ2BufferedReader(getInputStreamForResource(fileName))) {
             log.info("Buffered reader for file created successfully...");

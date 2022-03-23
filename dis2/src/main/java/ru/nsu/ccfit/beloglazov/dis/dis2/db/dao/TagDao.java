@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class TagDao extends Dao {
 
     public TagDao(Connection connection) {
-        super(connection, "tags");
+        super(connection);
     }
 
     public void insert(ExecuteStrategy es, Node node, Tag tag) throws SQLException {

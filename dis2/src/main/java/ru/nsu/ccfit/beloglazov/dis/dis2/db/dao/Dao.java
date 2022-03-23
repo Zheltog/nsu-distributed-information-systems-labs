@@ -7,11 +7,9 @@ import java.sql.SQLException;
 public class Dao {
 
     private final Connection connection;
-    private final String tableName;
 
-    public Dao(Connection connection, String tableName) {
+    public Dao(Connection connection) {
         this.connection = connection;
-        this.tableName = tableName;
     }
 
     protected void insert(ExecuteStrategy es, String sql) throws SQLException {
@@ -23,14 +21,6 @@ public class Dao {
                 executeViaPreparedStatement(sql);
                 break;
         }
-    }
-
-    public void truncate() throws SQLException {
-        executeViaPreparedStatement(sqlTruncate());
-    }
-
-    private String sqlTruncate() {
-        return "truncate table " + tableName + " cascade";
     }
 
     private void executeViaStatement(String sql) throws SQLException {

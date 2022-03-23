@@ -20,16 +20,6 @@ public class DatabaseLoader {
         tagDao = new TagDao(connection);
     }
 
-    public void clearData() {
-        try {
-            tagDao.truncate();
-            nodeDao.truncate();
-            log.info("Tables data cleaning finished successfully");
-        } catch (SQLException e) {
-            log.error(e.getMessage());
-        }
-    }
-
     public void insertNode(ExecuteStrategy es, Node node) {
         try {
             nodeDao.insert(es, node);
