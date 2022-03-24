@@ -11,7 +11,7 @@ public class Main {
                     es,
                     "RU-NVS.osm.bz2",
                     false,
-                    1000
+                    30000
             );
         }
     }

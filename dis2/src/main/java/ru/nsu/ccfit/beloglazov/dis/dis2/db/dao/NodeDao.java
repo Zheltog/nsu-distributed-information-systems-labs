@@ -1,11 +1,7 @@
 package ru.nsu.ccfit.beloglazov.dis.dis2.db.dao;
 
 import ru.nsu.ccfit.beloglazov.dis.dis2.generated.Node;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Timestamp;
-import static java.sql.Types.NULL;
+import java.sql.*;
 
 public class NodeDao extends Dao {
 
@@ -41,11 +37,12 @@ public class NodeDao extends Dao {
         ps.setDouble(3, node.getLon());
         ps.setString(4, node.getUser());
         ps.setInt(5, node.getUid().intValue());
-        if (node.isVisible() != null) {
-            ps.setBoolean(6, node.isVisible());
-        } else {
-            ps.setNull(6, NULL);
-        }
+        ps.setObject(6, node.isVisible(), Types.BOOLEAN);
+//        if (node.isVisible() != null) {
+//            ps.setBoolean(6, node.isVisible());
+//        } else {
+//            ps.setNull(6, NULL);
+//        }
         ps.setInt(7, node.getVersion().intValue());
         ps.setInt(8, node.getChangeset().intValue());
         ps.setTimestamp(9, Timestamp.from(node.getTimestamp().toGregorianCalendar().toInstant()));

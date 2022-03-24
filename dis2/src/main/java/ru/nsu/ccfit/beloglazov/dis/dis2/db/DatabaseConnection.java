@@ -25,6 +25,7 @@ public class DatabaseConnection {
             String login = properties.getProperty("LOGIN");
             String password = properties.getProperty("PASSWORD");
             connection = DriverManager.getConnection(url, login, password);
+            connection.setAutoCommit(false);
 //            log.info("New database connection created successfully");
             return connection;
         } catch (IOException | SQLException e) {

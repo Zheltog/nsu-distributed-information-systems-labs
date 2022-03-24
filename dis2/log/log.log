@@ -1,3 +1,3 @@
-2022-03-23 21:20:02 INFO  CompressedOsmParser:51 - Best 1 node insert time (sec) for strategy STATEMENT: 7.0039E-4
-2022-03-23 21:20:03 INFO  CompressedOsmParser:51 - Best 1 node insert time (sec) for strategy PREPARED_STATEMENT: 6.83046E-4
-2022-03-23 21:20:03 INFO  CompressedOsmParser:51 - Best 1 node insert time (sec) for strategy BATCH: 1.48951E-4
+2022-03-24 13:57:37 INFO  CompressedOsmParser:52 - Insert speed for strategy STATEMENT: 2971.857780850774 (nodes/sec)
+2022-03-24 13:57:49 INFO  CompressedOsmParser:52 - Insert speed for strategy PREPARED_STATEMENT: 2900.577486761988 (nodes/sec)
+2022-03-24 13:57:53 INFO  CompressedOsmParser:52 - Insert speed for strategy BATCH: 8346.339814889021 (nodes/sec)

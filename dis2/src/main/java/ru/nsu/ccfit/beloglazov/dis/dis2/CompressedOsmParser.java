@@ -7,8 +7,7 @@ import ru.nsu.ccfit.beloglazov.dis.dis2.generated.Node;
 import ru.nsu.ccfit.beloglazov.dis.dis2.generated.Tag;
 import javax.xml.bind.JAXBException;
 import javax.xml.stream.XMLStreamException;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
+import java.io.FileInputStream;
 import java.util.*;
 import java.util.Map.Entry;
 import static java.util.stream.Collectors.toMap;
@@ -24,6 +23,7 @@ public class CompressedOsmParser {
     private static ExecuteStrategy strategy;
     private static DatabaseLoader loader;
     private static int for1st;
+    private static long insertTimeSumNSecs;
 
     /**
         @param es execute strategy for data loading
@@ -44,17 +44,18 @@ public class CompressedOsmParser {
         for1st = forFirst;
         loader = new DatabaseLoader(getConnection());
 //        log.info("Creating reader for file...");
-        try (BZ2BufferedReader br = new BZ2BufferedReader(getInputStreamForResource(fileName))) {
+        try (BZ2BufferedReader br = new BZ2BufferedReader(new FileInputStream(fileName))) {
 //            log.info("Buffered reader for file created successfully...");
-            long bestInsertTimeNSecs = process(br, printStatistics);
-            double bestInsertTimeSecs = (double) bestInsertTimeNSecs / 1000000000;
-            log.info("Best 1 node insert time (sec) for strategy " + strategy + ": " + bestInsertTimeSecs);
+            insertTimeSumNSecs = 0;
+            process(br, printStatistics);
+            double insertTimeSumSecs = (double) insertTimeSumNSecs /  1000000000;
+            log.info("Insert speed for strategy " + strategy + ": " + (double) forFirst / insertTimeSumSecs + " (nodes/sec)");
         } catch (Exception e) {
             log.error(e.getMessage());
         }
     }
 
-    private static long process(BZ2BufferedReader br, boolean printStatistics) throws XMLStreamException, JAXBException {
+    private static void process(BZ2BufferedReader br, boolean printStatistics) throws XMLStreamException, JAXBException {
 //        log.info("Processing file...");
         try (OSMReader reader = new OSMReader(br)) {
 //            log.info("StAX processor for file created successfully...");
@@ -64,7 +65,6 @@ public class CompressedOsmParser {
             Map<String, Integer> names = new HashMap<>();
 
             int nodesCount = 1;
-            long bestInsertTime = Long.MAX_VALUE;
 
             while (true) {
                 Node node = reader.nextNode();
@@ -74,12 +74,10 @@ public class CompressedOsmParser {
 
                 switch (strategy) {
                     case STATEMENT:
-                        long timeS = loader.insertViaStatement(node);
-                        if (timeS < bestInsertTime) bestInsertTime = timeS;
+                        insertTimeSumNSecs += loader.insertViaStatement(node);
                         break;
                     case PREPARED_STATEMENT:
-                        long timePS = loader.insertViaPreparedStatement(node);
-                        if (timePS < bestInsertTime) bestInsertTime = timePS;
+                        insertTimeSumNSecs += loader.insertViaPreparedStatement(node);
                         break;
                     case BATCH:
                         loader.addToBatch(node);
@@ -98,8 +96,7 @@ public class CompressedOsmParser {
             }
 
             if (strategy.equals(BATCH)) {
-                long timeB = loader.executeBatch() / nodesCount;
-                if (timeB < bestInsertTime) bestInsertTime = timeB;
+                insertTimeSumNSecs += loader.executeBatch();
             }
 
 //            log.info("Processing is finished...");
@@ -110,17 +107,6 @@ public class CompressedOsmParser {
                 log.info("Printing result for names...");
                 printMap(sortByValues(names));
             }
-
-            return bestInsertTime;
-        }
-    }
-
-    private static InputStream getInputStreamForResource(String fileName) throws FileNotFoundException {
-        InputStream is = Main.class.getClassLoader().getResourceAsStream(fileName);
-        if (is == null) {
-            throw new FileNotFoundException("File " + fileName + " does not exist in resources folder");
-        } else {
-            return is;
         }
     }
 

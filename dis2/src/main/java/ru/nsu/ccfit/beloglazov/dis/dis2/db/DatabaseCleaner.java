@@ -13,6 +13,7 @@ public class DatabaseCleaner {
             connection.prepareStatement(
                     "truncate table tags cascade;" +
                             "truncate table nodes cascade;").execute();
+            connection.commit();
 //            log.info("Tables data cleaning finished successfully");
         } catch (SQLException e) {
             log.error(e.getMessage());
