@@ -1,0 +1,3 @@
+2022-03-24 13:57:37 INFO  CompressedOsmParser:52 - Insert speed for strategy STATEMENT: 2971.857780850774 (nodes/sec)
+2022-03-24 13:57:49 INFO  CompressedOsmParser:52 - Insert speed for strategy PREPARED_STATEMENT: 2900.577486761988 (nodes/sec)
+2022-03-24 13:57:53 INFO  CompressedOsmParser:52 - Insert speed for strategy BATCH: 8346.339814889021 (nodes/sec)
