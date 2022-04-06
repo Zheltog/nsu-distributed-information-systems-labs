@@ -56,6 +56,7 @@ public class DatabaseInitializer {
 
         PreparedStatement ps = connection.prepareStatement(sql);
         ps.execute();
+        connection.commit();
     }
 
     private static void createTagsTable(Connection connection) throws SQLException {
@@ -66,5 +67,6 @@ public class DatabaseInitializer {
 
         PreparedStatement ps = connection.prepareStatement(sql);
         ps.execute();
+        connection.commit();
     }
 }
