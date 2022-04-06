@@ -29,6 +29,7 @@ public class DatabaseLoader {
                 TagDao tagDao = new TagDao(connection, node, tag);
                 connection.createStatement().execute(tagDao.getInsertStatementSql());
             }
+            connection.commit();
             return System.nanoTime() - startTime;
         } catch (SQLException e) {
             log.error(e.getMessage());
@@ -45,6 +46,7 @@ public class DatabaseLoader {
                 TagDao tagDao = new TagDao(connection, node, tag);
                 tagDao.getPreparedStatement().execute();
             }
+            connection.commit();
             return System.nanoTime() - startTime;
         } catch (SQLException e) {
             log.error(e.getMessage());
@@ -70,6 +72,7 @@ public class DatabaseLoader {
         try {
             long startTime = System.nanoTime();
             batch.executeBatch();
+            connection.commit();
             return System.nanoTime() - startTime;
         } catch (SQLException e) {
             log.error(e.getMessage());

@@ -2,17 +2,12 @@ package ru.nsu.ccfit.beloglazov.dis.dis3.entities;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.DynamicUpdate;
-import org.hibernate.annotations.Table;
-import org.springframework.data.annotation.Id;
-import javax.persistence.Column;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
-import java.util.List;
 
-@DynamicUpdate
-@Table(appliesTo = "nodes")
+@Entity
+@Table(name = "nodes")
 @Data
 @NoArgsConstructor
 public class NodeEntity {
@@ -44,7 +39,4 @@ public class NodeEntity {
 
     @Column
     private LocalDateTime timestamp;
-
-    @OneToMany(mappedBy = "nodes")
-    private List<TagEntity> tags;
 }
