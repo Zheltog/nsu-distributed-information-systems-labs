@@ -1,4 +1,4 @@
-package ru.nsu.ccfit.beloglazov.dis.dis3;
+package ru.nsu.ccfit.beloglazov.dis.dis3.parsing;
 
 import ru.nsu.ccfit.beloglazov.dis.dis3.generated.Node;
 import javax.xml.bind.JAXBContext;

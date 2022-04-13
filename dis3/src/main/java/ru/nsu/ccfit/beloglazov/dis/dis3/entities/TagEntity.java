@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @IdClass(TagId.class)
@@ -11,7 +12,7 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class TagEntity {
+public class TagEntity implements Serializable {
 
     @Id
     @Column(nullable = false)

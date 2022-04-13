@@ -1,4 +1,4 @@
-package ru.nsu.ccfit.beloglazov.dis.dis3;
+package ru.nsu.ccfit.beloglazov.dis.dis3.parsing;
 
 import org.apache.log4j.Logger;
 import ru.nsu.ccfit.beloglazov.dis.dis3.jdbc.DatabaseLoader;
