@@ -4,7 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.extern.java.Log;
 import org.springframework.web.bind.annotation.*;
 import ru.nsu.ccfit.beloglazov.dis.dis3.dto.NodeDto;
+import ru.nsu.ccfit.beloglazov.dis.dis3.dto.RangeDto;
 import ru.nsu.ccfit.beloglazov.dis.dis3.services.NodeService;
+import java.util.List;
 
 @RestController
 @RequestMapping("/node")
@@ -30,5 +32,11 @@ public class NodeController {
     public void deleteById(@PathVariable int id) {
         log.info("Node :: handling :: deleteById");
         nodeService.deleteById(id);
+    }
+
+    @GetMapping("/range")
+    public List<NodeDto> findInRange(@RequestBody RangeDto range) {
+        log.info("Node :: handling :: findInRange");
+        return nodeService.findInRange(range);
     }
 }

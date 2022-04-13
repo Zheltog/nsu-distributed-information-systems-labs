@@ -4,7 +4,9 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.nsu.ccfit.beloglazov.dis.dis3.converters.NodeConverter;
 import ru.nsu.ccfit.beloglazov.dis.dis3.dto.NodeDto;
+import ru.nsu.ccfit.beloglazov.dis.dis3.dto.RangeDto;
 import ru.nsu.ccfit.beloglazov.dis.dis3.repositories.NodeRepository;
+import java.util.List;
 
 @AllArgsConstructor
 @Service
@@ -25,5 +27,14 @@ public class NodeServiceImpl implements NodeService {
     @Override
     public void deleteById(int nodeId) {
         repository.deleteById(nodeId);
+    }
+
+    @Override
+    public List<NodeDto> findInRange(RangeDto range) {
+        return NodeConverter.entityListToDtoList(
+                repository.getNodesInRangeOrderByDistanceAsc(
+                    range.getLat(), range.getLon(), range.getRadius()
+            )
+        );
     }
 }

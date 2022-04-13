@@ -2,6 +2,8 @@ package ru.nsu.ccfit.beloglazov.dis.dis3.converters;
 
 import ru.nsu.ccfit.beloglazov.dis.dis3.dto.NodeDto;
 import ru.nsu.ccfit.beloglazov.dis.dis3.entities.NodeEntity;
+import java.util.LinkedList;
+import java.util.List;
 
 public class NodeConverter {
 
@@ -33,5 +35,15 @@ public class NodeConverter {
                 dto.getChangeset(),
                 dto.getTimestamp()
         );
+    }
+
+    public static List<NodeDto> entityListToDtoList(List<NodeEntity> entities) {
+        List<NodeDto> result = new LinkedList<>();
+        if (entities != null) {
+            for (NodeEntity entity: entities) {
+                result.add(entityToDto(entity));
+            }
+        }
+        return result;
     }
 }
