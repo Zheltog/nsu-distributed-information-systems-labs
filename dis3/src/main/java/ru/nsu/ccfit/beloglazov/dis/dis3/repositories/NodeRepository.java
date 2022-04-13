@@ -10,15 +10,13 @@ public interface NodeRepository extends JpaRepository<NodeEntity, Integer> {
 
     @Query(
             value = "SELECT * FROM nodes " +
-            "WHERE (earth_distance(ll_to_earth(55, 83), ll_to_earth(nodes.lat, nodes.lon)) < :rad + earth_distance(ll_to_earth(:lat, :lon), ll_to_earth(55, 83))) " +
-                "AND (earth_distance(ll_to_earth(54, 82), ll_to_earth(nodes.lat, nodes.lon)) < :rad + earth_distance(ll_to_earth(:lat, :lon), ll_to_earth(54, 82))) " +
-                "AND earth_distance(ll_to_earth(:lat, :lon), ll_to_earth(nodes.lat, nodes.lon)) < :rad " +
+            "WHERE earth_distance(ll_to_earth(:lat, :lon), ll_to_earth(nodes.lat, nodes.lon)) < :rad " +
             "ORDER BY earth_distance(ll_to_earth(:lat, :lon), ll_to_earth(nodes.lat, nodes.lon)) ASC",
             nativeQuery = true
     )
     List<NodeEntity> getNodesInRangeOrderByDistanceAsc(
-            @Param("lat") Double latitude,
-            @Param("lon") Double longtitude,
-            @Param("rad") Double radius
+            @Param("lat") Double lat,
+            @Param("lon") Double lon,
+            @Param("rad") Double rad
     );
 }
