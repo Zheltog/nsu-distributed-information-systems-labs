@@ -1,4 +1,4 @@
-package ru.nsu.ccfit.beloglazov.dis.dis3.db;
+package ru.nsu.ccfit.beloglazov.dis.dis3.jdbc;
 
 import org.apache.log4j.Logger;
 import java.io.IOException;

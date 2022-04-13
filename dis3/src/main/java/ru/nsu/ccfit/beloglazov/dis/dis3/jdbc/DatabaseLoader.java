@@ -1,8 +1,8 @@
-package ru.nsu.ccfit.beloglazov.dis.dis3.db;
+package ru.nsu.ccfit.beloglazov.dis.dis3.jdbc;
 
 import org.apache.log4j.Logger;
-import ru.nsu.ccfit.beloglazov.dis.dis3.db.dao.NodeDao;
-import ru.nsu.ccfit.beloglazov.dis.dis3.db.dao.TagDao;
+import ru.nsu.ccfit.beloglazov.dis.dis3.jdbc.dao.NodeDao;
+import ru.nsu.ccfit.beloglazov.dis.dis3.jdbc.dao.TagDao;
 import ru.nsu.ccfit.beloglazov.dis.dis3.generated.Node;
 import ru.nsu.ccfit.beloglazov.dis.dis3.generated.Tag;
 import java.sql.Connection;

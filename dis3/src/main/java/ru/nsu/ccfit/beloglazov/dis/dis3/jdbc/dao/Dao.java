@@ -1,4 +1,4 @@
-package ru.nsu.ccfit.beloglazov.dis.dis3.db.dao;
+package ru.nsu.ccfit.beloglazov.dis.dis3.jdbc.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

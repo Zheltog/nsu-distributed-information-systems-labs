@@ -1,4 +1,4 @@
-package ru.nsu.ccfit.beloglazov.dis.dis3.db.dao;
+package ru.nsu.ccfit.beloglazov.dis.dis3.jdbc.dao;
 
 import ru.nsu.ccfit.beloglazov.dis.dis3.generated.Node;
 import ru.nsu.ccfit.beloglazov.dis.dis3.generated.Tag;

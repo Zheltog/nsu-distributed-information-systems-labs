@@ -1,8 +1,8 @@
 package ru.nsu.ccfit.beloglazov.dis.dis3;
 
 import org.apache.log4j.Logger;
-import ru.nsu.ccfit.beloglazov.dis.dis3.db.DatabaseLoader;
-import ru.nsu.ccfit.beloglazov.dis.dis3.db.ExecuteStrategy;
+import ru.nsu.ccfit.beloglazov.dis.dis3.jdbc.DatabaseLoader;
+import ru.nsu.ccfit.beloglazov.dis.dis3.jdbc.ExecuteStrategy;
 import ru.nsu.ccfit.beloglazov.dis.dis3.generated.Node;
 import ru.nsu.ccfit.beloglazov.dis.dis3.generated.Tag;
 import javax.xml.bind.JAXBException;
@@ -11,10 +11,10 @@ import java.io.FileInputStream;
 import java.util.*;
 import java.util.Map.Entry;
 import static java.util.stream.Collectors.toMap;
-import static ru.nsu.ccfit.beloglazov.dis.dis3.db.DatabaseCleaner.cleanTables;
-import static ru.nsu.ccfit.beloglazov.dis.dis3.db.DatabaseConnection.getConnection;
-import static ru.nsu.ccfit.beloglazov.dis.dis3.db.DatabaseInitializer.initializeMissingTables;
-import static ru.nsu.ccfit.beloglazov.dis.dis3.db.ExecuteStrategy.BATCH;
+import static ru.nsu.ccfit.beloglazov.dis.dis3.jdbc.DatabaseCleaner.cleanTables;
+import static ru.nsu.ccfit.beloglazov.dis.dis3.jdbc.DatabaseConnection.getConnection;
+import static ru.nsu.ccfit.beloglazov.dis.dis3.jdbc.DatabaseInitializer.initializeMissingTables;
+import static ru.nsu.ccfit.beloglazov.dis.dis3.jdbc.ExecuteStrategy.BATCH;
 
 public class CompressedOsmParser {
 
