@@ -21,9 +21,9 @@ public class NodeController {
     }
 
     @PostMapping("/save")
-    public void save(@RequestBody NodeDto node) {
+    public NodeDto save(@RequestBody NodeDto node) {
         log.info("Node :: handling :: save");
-        nodeService.save(node);
+        return nodeService.save(node);
     }
 
     @DeleteMapping("/delete/{id}")

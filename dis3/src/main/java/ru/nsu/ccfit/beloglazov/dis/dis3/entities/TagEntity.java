@@ -1,5 +1,6 @@
 package ru.nsu.ccfit.beloglazov.dis.dis3.entities;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
@@ -9,6 +10,7 @@ import javax.persistence.*;
 @Table(name = "tags")
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class TagEntity {
 
     @Id
