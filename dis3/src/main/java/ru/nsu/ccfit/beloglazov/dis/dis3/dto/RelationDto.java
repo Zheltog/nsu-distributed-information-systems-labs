@@ -9,9 +9,9 @@ import java.util.List;
 
 @Data
 @AllArgsConstructor
-public class WayDto {
+public class RelationDto {
 
-    private List<Nd> nd;
+    private List<Member> member;
     private List<TagDto> tag;
     private Integer id;
     private String usr;
@@ -24,7 +24,9 @@ public class WayDto {
     @Data
     @AllArgsConstructor
     @NoArgsConstructor
-    public static class Nd {
+    public static class Member {
+        private String type;
         private BigInteger ref;
+        private String role;
     }
 }
