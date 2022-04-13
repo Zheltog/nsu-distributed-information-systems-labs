@@ -5,6 +5,7 @@ import lombok.Data;
 
 import java.math.BigInteger;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -18,4 +19,5 @@ public class NodeDto {
     private BigInteger version;
     private BigInteger changeset;
     private LocalDateTime timestamp;
+    private List<TagDto> tags;
 }

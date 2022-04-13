@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "nodes")
@@ -41,4 +42,7 @@ public class NodeEntity {
 
     @Column
     private LocalDateTime timestamp;
+
+    @OneToMany(mappedBy = "nodeId")
+    private List<TagEntity> tags;
 }
