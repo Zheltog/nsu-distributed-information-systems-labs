@@ -10,7 +10,8 @@ public interface NodeRepository extends JpaRepository<NodeEntity, Integer> {
 
     @Query(
             value = "SELECT * FROM nodes " +
-            "WHERE earth_distance(ll_to_earth(:lat, :lon), ll_to_earth(nodes.lat, nodes.lon)) < :rad " +
+            "WHERE earth_box(ll_to_earth(:lat, :lon), :rad) @> ll_to_earth(lat, lon) and " +
+            "earth_distance(ll_to_earth(:lat, :lon), ll_to_earth(nodes.lat, nodes.lon)) < :rad " +
             "ORDER BY earth_distance(ll_to_earth(:lat, :lon), ll_to_earth(nodes.lat, nodes.lon)) ASC",
             nativeQuery = true
     )
