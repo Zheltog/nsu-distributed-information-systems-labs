@@ -5,9 +5,11 @@ import org.springframework.stereotype.Service;
 import ru.nsu.ccfit.beloglazov.dis.dis3.converters.RelationConverter;
 import ru.nsu.ccfit.beloglazov.dis.dis3.dto.RelationDto;
 import ru.nsu.ccfit.beloglazov.dis.dis3.repositories.RelationRepository;
+import javax.transaction.Transactional;
 
 @AllArgsConstructor
 @Service
+@Transactional
 public class RelationServiceImpl implements RelationService {
 
     private final RelationRepository repository;

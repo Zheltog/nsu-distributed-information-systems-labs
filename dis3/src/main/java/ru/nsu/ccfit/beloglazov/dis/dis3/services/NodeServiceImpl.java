@@ -6,10 +6,12 @@ import ru.nsu.ccfit.beloglazov.dis.dis3.converters.NodeConverter;
 import ru.nsu.ccfit.beloglazov.dis.dis3.dto.NodeDto;
 import ru.nsu.ccfit.beloglazov.dis.dis3.dto.RangeDto;
 import ru.nsu.ccfit.beloglazov.dis.dis3.repositories.NodeRepository;
+import javax.transaction.Transactional;
 import java.util.List;
 
 @AllArgsConstructor
 @Service
+@Transactional
 public class NodeServiceImpl implements NodeService {
 
     private final NodeRepository repository;

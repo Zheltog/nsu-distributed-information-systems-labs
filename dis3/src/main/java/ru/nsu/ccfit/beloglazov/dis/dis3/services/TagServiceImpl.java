@@ -5,9 +5,11 @@ import org.springframework.stereotype.Service;
 import ru.nsu.ccfit.beloglazov.dis.dis3.converters.TagConverter;
 import ru.nsu.ccfit.beloglazov.dis.dis3.dto.TagDto;
 import ru.nsu.ccfit.beloglazov.dis.dis3.repositories.TagRepository;
+import javax.transaction.Transactional;
 
 @AllArgsConstructor
 @Service
+@Transactional
 public class TagServiceImpl implements TagService {
 
     private final TagRepository repository;
